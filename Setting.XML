@@ -1,0 +1,95 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_Setting_Fragment"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Username -->
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:textColor="?attr/android:textColor"
+            android:textColorHint="?android:textColorHint"
+            android:padding="8dp"
+            android:backgroundTint="?attr/colorPrimary"/>
+
+        <!-- Email -->
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:textColor="?attr/android:textColor"
+            android:textColorHint="?android:textColorHint"
+            android:padding="8dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="Password"
+            android:textColor="?attr/android:textColor"
+            android:textColorHint="?android:textColorHint"
+            android:padding="8dp"
+            android:backgroundTint="?attr/colorPrimary"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Notification Switch -->
+        <Switch
+            android:id="@+id/notificationswitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Notifications"
+            android:textColor="?attr/android:textColor"
+            android:paddingTop="12dp"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Theme:"
+            android:textColor="?attr/android:textColor"
+            android:textSize="16sp"
+            android:paddingTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/themeSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/themes"
+            android:popupBackground="@android:color/white"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/Savebtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Preferences"
+            android:textColor="?android:textColorPrimary"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="?attr/colorPrimary"/>
+
+        <Button
+            android:id="@+id/Resetbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset Preferences"
+            android:textColor="?android:textColorPrimary"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="?attr/colorPrimary"/>
+
+    </LinearLayout>
+</ScrollView>
