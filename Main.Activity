@@ -1,0 +1,54 @@
+package com.example.assignment_no_02;
+
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
+
+public class MainActivity extends AppCompatActivity {
+
+    Button btnSettings, btnProfile;
+    SharedPreferences prefs;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+
+        prefs = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        String theme = prefs.getString("theme", "Light");
+        applyTheme(theme);
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        btnSettings = findViewById(R.id.btnSettings);
+        btnProfile = findViewById(R.id.btnProfile);
+
+        replaceFragment(new User_Setting_Fragment());
+
+        btnSettings.setOnClickListener(v -> replaceFragment(new User_Setting_Fragment()));
+        btnProfile.setOnClickListener(v -> replaceFragment(new Profile_Fragment()));
+    }
+
+    private void replaceFragment(Fragment fragment) {
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+        transaction.replace(R.id.fragmentContainer, fragment);
+        transaction.commit();
+    }
+
+    private void applyTheme(String theme) {
+        switch (theme) {
+            case "Light":
+                setTheme(R.style.AppTheme_Light);
+                break;
+            case "Dark":
+                setTheme(R.style.AppTheme_Dark);
+                break;
+            case "Blue":
+                setTheme(R.style.AppTheme_Blue);
+                break;
+        }
+    }
+}
