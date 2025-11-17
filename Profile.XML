@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="?android:windowBackground">
+
+    <TextView
+        android:id="@+id/username2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Username: "
+        android:textColor="?attr/android:textColor"
+        android:textSize="16sp"
+        android:padding="4dp"/>
+
+    <TextView
+        android:id="@+id/email2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email: "
+        android:textColor="?attr/android:textColor"
+        android:textSize="16sp"
+        android:padding="4dp"/>
+
+    <TextView
+        android:id="@+id/password2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password: "
+        android:textColor="?attr/android:textColor"
+        android:textSize="16sp"
+        android:padding="4dp"/>
+
+    <TextView
+        android:id="@+id/notification2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Notifications: "
+        android:textColor="?attr/android:textColor"
+        android:textSize="16sp"
+        android:padding="4dp"/>
+
+    <TextView
+        android:id="@+id/theme2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Theme: "
+        android:textColor="?attr/android:textColor"
+        android:textSize="16sp"
+        android:padding="4dp"/>
+</LinearLayout>
